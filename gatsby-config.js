@@ -5,6 +5,7 @@ module.exports = {
     description: `Let's see if I can get The Park Pilot in Gatsby!`,
     author: `Justin Keiser`,
   },
+  pathPrefix: "/blogs-d8-gatsby",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
