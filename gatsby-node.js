@@ -27,7 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
             graphql(
                 `
           {
-            allNodeArticle {
+            allNodeArticle(filter: {relationships: {field_article: {elemMatch: {name: {eq: "Bios"}}}}}) {
               edges {
                 node {
                   title
