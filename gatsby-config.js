@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `The Park Pilot`,
+    slogan: `Inspire, Inform, Instruct`,
+    description: `Let's see if I can get The Park Pilot in Gatsby!`,
+    author: `Justin Keiser`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +25,14 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/web-logo.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: `http://blogs-d8.lndo.site/`,
+        apiBase: `jsonapi`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

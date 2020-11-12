@@ -6,10 +6,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BiosTeaser from "../components/bios-teaser";
 
-
-const IndexPage = ({ data }) => (
+const BiosListing = ({ data }) => (
   <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Bios Listing" keywords={[`gatsby`, `application`, `react`]} />
+      <h1>Bios</h1>
       { data.allNodeArticle.edges.map((article) => (
           <BiosTeaser
               key={article.node.id}
@@ -36,7 +36,7 @@ export const query = graphql`
           fields {
             slug
           } 
-          created(formatString: "MMMM Do, YYYY") 
+          created(formatString: "MMMM Do, YYYY")
           relationships {
             field_author {
               name
@@ -64,5 +64,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
-
+export default BiosListing
