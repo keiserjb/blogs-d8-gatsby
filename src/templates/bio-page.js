@@ -1,5 +1,5 @@
 import React from "react"
-// import { withPrefix } from 'gatsby'
+import { withPrefix } from 'gatsby'
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
